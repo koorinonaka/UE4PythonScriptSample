@@ -14,6 +14,7 @@ class ReportDuplicatedAssetNames(object):
     def check_duplicate(self, asset_data):
         asset_name = asset_data.asset_name
         package_name = asset_data.package_name
+
         if asset_name in self.dict_key_check:
             if asset_name not in self.dict_duplicates:
                 self.dict_duplicates[asset_name] = {}
